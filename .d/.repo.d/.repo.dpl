@@ -1,0 +1,6 @@
+#!/bin/bash
+
+[[ -d ${HOME}/.d ]] || mkdir ${HOME}/.d
+[[ -d ${HOME}/.d/.lst.d ]] || mkdir ${HOME}/.d/.st.lst 
+[[ -d ${HOME}/.d/.path.d ]] || mkdir ${HOME}/.d/.path.d
+[[ -d ${HOME}/.d/.rc.d ]] || mkdir ${HOME}/.d/.rc.d

@@ -1,0 +1,17 @@
+#!/bin/bash
+
+#! err var if not comment
+# echo -e "${HLIGHT}--- find ${REPO_PATH}/${name_repo} -type f -size +1M -not -path ${REPO_PATH}/${name_repo}/.git/* ---${NORMAL}" #start files
+# if [ -n "$(find ${REPO_PATH}/${name_repo} -type f -size +1M -not -path "${REPO_PATH}/${name_repo}/.git/*")" ]; then
+#     plt_info "in file:///${REPO_PATH}/tgu/.d/.ham/ham/before_add_file_.ham : EXEC_TRUE : 'find ${REPO_PATH}/${repo_name} -type f -size +1M -not -path ${REPO_PATH}/${name_repo}/.git/*' : return 1"
+#     return 1
+# fi
+
+#! true var if not comment
+echo -e "${HLIGHT}--- find ${REPO_PATH}/${name_repo} -type f -size +40M -not -path ${REPO_PATH}/${name_repo}/.git/* ---${NORMAL}" #start files
+if [ -n "$(find ${REPO_PATH}/${name_repo} -type f -size +40M -not -path "${REPO_PATH}/${name_repo}/.git/*")" ]; then
+    plt_info "in file:///${REPO_PATH}/tgu/.d/.ham/ham/before_add_file_.ham : EXEC_TRUE : 'find ${REPO_PATH}/${repo_name} -type f -size +40M -not -path ${REPO_PATH}/${name_repo}/.git/*' : return 1"
+    return 1
+fi
+
+return 0

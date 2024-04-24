@@ -1,0 +1,13 @@
+#!/bin/bash
+
+file=${STA_PATH}/.d/.config/env.sh
+
+if [[ -f ${file} ]]; then
+    if ! . ${file}; then
+        echo "in fs=file://${ST_RC_D_PATH}/.d/.repo.d/.repo.rc , line=${LINENO} : : EXEC_FAIL : '. file://${file}' : ${hint} : return 1" >&2
+        return 1
+    fi
+else
+    echo "in fs=file://${ST_RC_D_PATH}/.d/.repo.d/.repo.rc , line=${LINENO}: : NOT_FILE : 'file://${file}' : ${hint} : return 1" >&2
+    return 1
+fi 
