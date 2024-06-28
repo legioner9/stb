@@ -31,7 +31,7 @@ NB!!: escaping in \$1 '\[' '\]' '\\\$' '\^' '\\\\\'
 
     #! ptr_path
     # local ptr_path="$3"
-    # ptr_path="$("${_abs_path}" "${PPWD}" "ptr_path")"
+    # ptr_path="$(_abs_path "${PPWD}" "ptr_path")"
     #[[ptr_path]]
     echo -e "${HLIGHT}--- exec: sed -i 's|$1||g' $2 ---${NORMAL}" #start files
     sed -i "s|$1||g" "$2"

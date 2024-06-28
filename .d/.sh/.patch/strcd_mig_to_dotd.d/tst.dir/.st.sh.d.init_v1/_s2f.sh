@@ -42,7 +42,7 @@ NB!!: escaping in \$2 '\[' '\]' '\\\$' '\^' '\\\\\'
 
     #! ptr_path
     # local ptr_path="$3"
-    # ptr_path="$("${_abs_path}" "${PPWD}" "ptr_path")"
+    # ptr_path="$(_abs_path "${PPWD}" "ptr_path")"
     #[[ptr_path]]
 
     sed -i "s|$1|$2|g" "$3"
