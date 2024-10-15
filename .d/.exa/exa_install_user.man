@@ -1,0 +1,21 @@
+# adduser.conf 
+
+# gig user from other user use /etc/adduser.conf
+
+    # для создания учетной записи пользователя
+    sudo adduser sth -m -k /etc/skel/
+    sudo adduser sth -m -k /home/st/.skel.d 
+    # для создания пароля
+    sudo passwd sth
+
+# use user
+
+    # перейти в юзера из другого с sth env
+    su - sth
+
+    
+
+# del user
+
+    # удалить домашнюю директорию пользователя и его файлы в системе
+    sudo userdel -r sth
